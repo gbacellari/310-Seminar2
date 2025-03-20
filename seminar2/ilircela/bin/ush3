@@ -1,0 +1,33 @@
+// Parent class Animal
+class Animal {
+  int id;
+  String name;
+  String color;
+
+  // Constructor
+  Animal(this.id, this.name, this.color);
+}
+
+// Child class Cat extending Animal
+class Cat extends Animal {
+  String sound;
+
+  // Constructor calling super class constructor
+  Cat(int id, String name, String color, this.sound) : super(id, name, color);
+
+  // Method to display cat details
+  void display() {
+    print('Cat ID: $id');
+    print('Name: $name');
+    print('Color: $color');
+    print('Sound: $sound');
+  }
+}
+
+void main() {
+  // Creating an object of Cat
+  Cat myCat = Cat(1, "Whiskers", "White", "Meow");
+
+  // Printing details
+  myCat.display();
+}
